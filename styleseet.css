@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+:root{
+    /* ### Primary */
+    --Very-dark-blue-main-background: hsl(233, 47%, 7%);
+    --Dark-desaturated-blue-card-background: hsl(244, 38%, 16%);
+    --Soft-violet-accent: hsl(277, 64%, 61%);
+    /* ### Neutral */
+    --White-main-heading-stats: hsl(0, 0%, 100%);
+    --Slightly-transparent-white-main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white-stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+html{
+    font-size: 15px;
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Inter', sans-serif; 
+    display: flex;
+    justify-content: center;
+    background-color: var(--Very-dark-blue-main-background);
+}
+.card{
+    width: 85vw;
+    margin: 30px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: var(--Dark-desaturated-blue-card-background);
+}
+.card-images{
+    /* border-radius: 15px 15px 0px 0px; */
+    background-color: var(--Soft-violet-accent);
+}
+.card-img--mobile{
+    max-width: 100%;
+    height: 100%;
+    
+    mix-blend-mode: multiply;
+}
+.card-img--desktop{
+    display: none;
+}
+.card__description{
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card__head{
+    width: 80%;
+    text-align: center;
+    margin: 20px;
+}
+h1{
+    color: var(--White-main-heading-stats);
+    margin-top: 15px;
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+}
+span{
+    color: var(--Soft-violet-accent);
+}
+.p__head{
+    margin: 30px 0px;
+    line-height: 1.7;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    color: var(--Slightly-transparent-white-main-paragraph);
+}
+.stats{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+h2{
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--White-main-heading-stats);
+    font-family: 'Lexend Deca', sans-serif; 
+}
+.p__stats{
+    margin-top: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: var(--Slightly-transparent-white-stat-headings);
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+}
+@media screen and (min-width:375px) {
+
+    .card-images{
+        border-radius: 15px 15px 0px 0px;    
+    }
+/* the same values above */
+}
+@media screen and (min-width:768px) {
+.card{
+    width: 55%;
+}   
+}
+@media screen and (min-width:1200px) {
+    .card{
+        width: 85vw;
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 15%;
+        justify-content: space-between;
+    }
+    .card__description{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-images {
+        border-radius: 0px 20px 29px 0;
+    }
+    .card-img--mobile{
+        display: none;
+    }
+    .card-img--desktop{
+        display: inline-block;
+        mix-blend-mode: multiply;
+        max-width: 100%;
+        border-radius: 0px 15px 15px 0px;
+}
+    .stats{
+        display: flex;
+        flex-direction: row;
+}
+.card__description {
+    width: 40%;
+    margin: 0; 
+}
+    .stat{
+     margin-left: 4.0625rem;
+    }
+    h1{
+        text-align: left;
+        font-size: 2.0rem;
+    }
+    .p__head{
+        text-align: left;
+        font-size: 1rem;
+    }
+    h2{
+        text-align: inherit;
+    }    
+}
+@media (min-width:1440px) {
+    .card{
+        width: 65vw;
+    }
+    h1{
+        font-size: 2.3rem;
+    }
+    .p__head{
+        font-size: 1rem;
+    }
+    .attribution{
+        text-align: center;
+    }
+}
+.attribution { 
+    font-size: 11px; 
+    display:inline-block;
+    color: aliceblue;
+    position: absolute;
+    bottom: -50%;
+}
+.attribution a { 
+    text-decoration: none;
+    color: #eee; 
+    font-weight: 900;
+}
